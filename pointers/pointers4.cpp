@@ -21,7 +21,8 @@ int main(int argc, char *argv[])
     void *c;
 
     // Now make `b` point to `a`.
-    b = (int *) a;
+    b = &a; // because b is a pointer it has to equal the address of a,
+    // so you need to have &a not (int *) a
 
     /***** CHANGE NOTHING BELOW THIS LINE *****/
     cout << "The value pointed by `b` is " << *b;

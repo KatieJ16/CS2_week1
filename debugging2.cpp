@@ -37,14 +37,17 @@ unsigned int divide(unsigned int a, unsigned int b)
         // Shift the high bit of the dividend into the remainder.
         // We do this by first shifting the remainder...
         y <<= 1;
+        cout << "y = " << y << endl;
         // and then copying the high bit of the dividend into the
         // low bit of the remainder...
         if (a & 0x80000000);
         {
             y |= 1;
+            cout << "in if, y = " << y << endl;
         }
         // and then shifting the dividend.
-        a <<= 1;
+        a >>= 1;
+        cout << "a = " << a << endl;
         // Now we check to see if we are allowed to subtract
         // the divisor from the portion of the dividend
         // we have shifted so far.
@@ -52,18 +55,22 @@ unsigned int divide(unsigned int a, unsigned int b)
         // place we are currently looking at in the quotient.
         // First we shift the quotient...
         x <<= 1;
+        cout << "x = " << x << endl;
         // then we test to see if we can do the subtraction.
         // If we can...
         if (y > b)
         {
             // then we subtract out the divisor from the remainder,
             y = b;
+            cout << "in 2if, y = " << y << ". b = " << b;
             // and set the correct bit in the quotient.
             x |= 1;
+            cout << " x = " << x << endl;
         }
         // Finally we advance the z counter,
         // to look at the next bit.
         z--;
+        cout << "z = " << z << endl;
     }
     return x;
 }

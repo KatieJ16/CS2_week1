@@ -17,7 +17,8 @@ using namespace std;
  */
 int main(int argc, char *argv[])
 {
-    int *a;
+    int *a = nullptr; //a will only be initalized if t % 2, 
+    //fix this by declaring to nullptr
     time_t t = time(nullptr); // Get the current Unix timestamp
 
     /***** CHANGE NOTHING BELOW THIS LINE *****/

@@ -75,7 +75,7 @@ int main(int argc, char ** argv)
 {
 
     /*-------- CHANGE NOTHING BELOW THIS LINE FOR PART 1 --------*/
-    int test_values[TEST_SIZE];
+    int * test_values = new int[TEST_SIZE];
     int real_size;
 
     // seed the PRNG
@@ -110,4 +110,6 @@ int main(int argc, char ** argv)
     cout << "Ascending = ";
     arrayPrint(arrayAscending(test_values, real_size), real_size);
     cout << endl;
+    
+    delete[] test_values;
 }

@@ -25,8 +25,8 @@ int main(int argc, char *argv[])
     // Now `b` points to the same array of ints.
     b = a;
 
-    free(a);
-    free(b);
+    free(a);//don't free(b) because b points to the same as a and when 
+    //you free a, b is also freed
 
     return 0;
 }

@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
 {
     /* TODO: Put your declarations here.
      * All variables are of type `int`. Only use one line! */
+     int a, *b, c, **d;
 
     /***** CHANGE NOTHING BELOW THIS LINE *****/
     a = 5;

@@ -18,7 +18,7 @@ Board::Board()
 	}
 	
 }
-s
+
 
 /** 
  *  @brief finds the value of a given square
